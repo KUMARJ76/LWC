@@ -1,0 +1,20 @@
+.demo{
+    color:blue;
+    font-size: large;
+    font-family: 'Courier New', Courier, monospace;
+    border: 2px solid red;
+    
+}
+:host{
+    color:  rgb(146, 152, 146);
+    display: block;
+    border: 2px solid rgb(6, 242, 41);
+    --sds-c-card-color-background:#ee0f86;
+}
+:host()
+{
+    --dark-yellow:#F6be00;
+}
+h1{
+    color:var(--dark-yellow);
+}

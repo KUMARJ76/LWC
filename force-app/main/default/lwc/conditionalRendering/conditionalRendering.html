@@ -1,0 +1,14 @@
+<template>
+    <lightning-card title='If Condition rendering'>
+        <lightning-input label="Show Details" type="checkbox" onclick={handleClick}></lightning-input>
+
+    <template if:true={isStudent}>
+        <div>Welcome to PLS Cap program</div>
+       <c-loginform></c-loginform>
+    </template>
+    <template if:false={isStudent}>
+        <div>Welcome to PLS program</div>
+        <c-registration-form></c-registration-form>
+    </template>
+</lightning-card>
+</template>

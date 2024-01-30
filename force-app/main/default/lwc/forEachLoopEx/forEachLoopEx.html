@@ -1,0 +1,9 @@
+<template>
+    <lightning-card title='for Each example'>
+    <template for:each={course} for:item="i">
+        <div key={i.id}>
+            {i.name}
+        </div>
+    </template>
+</lightning-card>
+</template>

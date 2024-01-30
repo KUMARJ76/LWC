@@ -1,0 +1,11 @@
+<template>
+    <lightning-card title="Search Students Name">
+        <lightning-input type="search" onchange={handleSearch}></lightning-input>
+        <template for:each={accounts} for:item="acc">
+            <h4 key={acc.Id}>
+                {acc.Name}
+            </h4>
+        </template>
+        <template if:true={error}>{error}</template>
+    </lightning-card>
+</template>

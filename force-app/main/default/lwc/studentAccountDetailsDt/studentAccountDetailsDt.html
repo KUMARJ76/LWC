@@ -1,0 +1,11 @@
+<template>
+    <lightning-card title="Students Account Details">
+        <template if:true={studentsData.data}>
+            <lightning-datatable key-field="Id" data={studentsData.data} columns={columns} 
+            show-row-number-column suppress-bottom-bar row-number-offset={rowOffset}>
+            </lightning-datatable>
+
+        </template>
+
+    </lightning-card>
+</template>

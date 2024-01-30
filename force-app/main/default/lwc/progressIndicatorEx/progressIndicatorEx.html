@@ -1,0 +1,28 @@
+<template>
+    <p>
+        A progress indicator displays the steps in a process. All steps preceding the step specified by currentStep are
+        marked completed.
+    </p>
+    <lightning-progress-indicator current-step={currentStep} type="base" has-error="true" variant="base">
+        <lightning-progress-step label="Step 1" value="1" onclick={handleClick}></lightning-progress-step>
+        <lightning-progress-step label="Step 2" value="2" onclick={handleClick}></lightning-progress-step>
+        <lightning-progress-step label="Step 3" value="3" onclick={handleClick}></lightning-progress-step>
+        <lightning-progress-step label="Step 4" value="4" onclick={handleClick}></lightning-progress-step>
+    </lightning-progress-indicator>
+    <template if:true={isStepOne}>
+        <c-registration-form></c-registration-form>
+
+    </template>
+    <template if:true={isStepTwo}>
+        <c-loginform></c-loginform>
+
+    </template>
+    <template if:true={isStepThree}>
+        <c-getter-setter></c-getter-setter>
+
+    </template>
+    <template if:true={isStepFour}>
+        <c-imparatively-method-ex></c-imparatively-method-ex>
+
+    </template>
+</template>

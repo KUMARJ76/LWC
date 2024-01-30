@@ -1,0 +1,13 @@
+<template>
+    <lightning-card title="Iterator Example">
+        <template iterator:it={course}>
+            <div key={it.value.id}>
+            <div if:true={it.first}>Loop is strating</div>
+            <div>
+                {it.value.id}. {it.value.name}
+                <div if:true={it.last}>End !!</div>
+            </div>
+        </div>
+        </template>
+    </lightning-card>
+</template>

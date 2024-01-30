@@ -1,0 +1,11 @@
+<template>
+    <lightning-card title="Lifecycle hook parent">
+        <c-lifecycle-child></c-lifecycle-child>
+    </lightning-card>
+    <template if:true={error}>
+        <c-display-info></c-display-info>
+    </template>
+    <template if:false={error}>
+        <c-create-modal-pop></c-create-modal-pop>
+    </template>
+</template>
